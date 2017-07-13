@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Light),
+      url("#{$avenir-font-path}Avenir-Light-webfont.woff") format("woff");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Book),
+  url("#{$avenir-font-path}Avenir-Book-webfont.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Roman),
+  url("#{$avenir-font-path}Avenir-Roman-webfont.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Medium),
+  url("#{$avenir-font-path}Avenir-Medium-webfont.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Heavy),
+  url("#{$avenir-font-path}Avenir-Heavy-webfont.woff") format("woff");
+    font-weight: 700;
+}
+
+@font-face {
+  font-family: "Avenir";
+  src: local(Avenir Black),
+  url("#{$avenir-font-path}Avenir-Black-webfont.woff") format("woff");
+    font-weight: 900;
+}
