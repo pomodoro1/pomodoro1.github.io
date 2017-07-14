@@ -1,0 +1,40 @@
+#x-submit-contact {
+  h4 {
+    margin: 2.5rem 0 0;
+    + p {
+      opacity: .75;
+      text-align: center;
+      margin: 1rem 0 2.5rem;
+    }
+  }
+}
+
+
+#submit-contact {
+
+  h4 + p {
+    text-align: center;
+  }
+
+  header {
+    img {
+      height: 64px;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-weight: 100;
+    }
+  }
+
+  @media #{$medium-and-up}{
+    footer,
+    .fieldset,
+    header {
+      padding: 20px 40px;
+    }
+
+  }
+
+
+
+}

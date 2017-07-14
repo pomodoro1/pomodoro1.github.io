@@ -1,0 +1,263 @@
+#hero {
+  background:  linear-gradient(45deg, darken(#77BAE6,25%), darken(#6DC38A,20%));
+  @extend .white-text;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  nav {
+    @extend .transparent;
+    @extend .z-depth-0;
+
+    @media #{$large-and-up} {
+      $x: 140px;
+      line-height: $x;
+      height: $x;
+      padding: 0 $large-and-up-padding;
+    }
+
+    .for {
+      opacity: .75;
+      font-size: 110%;
+    }
+    .cta {
+      @extend .btn-large, .z-depth-0, .transparent, .white-text;
+      border: 2px solid white;
+      text-transform: none;
+      font-weight: 400;
+      box-sizing: content-box;
+      &:hover {
+        @extend .white, .green-text;
+      }
+    }
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: 100;
+      strong {
+        font-weight: 900;
+      }
+      img {
+        max-height: 48px;
+        margin-right: 4px;
+      }
+    }
+  }
+
+  .demo {
+    //@extend .hide-on-medium-and-down;
+  }
+  @media #{$medium-and-down}{
+    .demo {
+      display: none;
+    }
+    text-align: center;
+  }
+
+  .cta.btn {
+    @extend .z-depth-4;
+    @extend .green-text, .white;
+    text-transform: none;
+    &:hover {
+      @extend .z-depth-5;
+    }
+  }
+
+
+  h1 {
+    margin: 0;
+    font-weight: 100;
+    font-size: 2.5rem;
+    line-height: 120%;
+    strong {
+      font-weight: 900;
+      border-bottom: 5px solid rgba(white,.1);
+      &:nth-of-type(2){
+      }
+    }
+    i {
+       font-style: normal;
+       opacity: .5;
+    }
+  }
+
+  h5 {
+    line-height: 150%;
+    font-weight: 100;
+    padding: 2.5rem 0;
+    font-size: 1.3rem;
+  }
+
+  @media #{$medium-and-down} {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    > .row {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  @media #{$large-and-up} {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    text-align: left;
+    max-width: 100%;
+    max-height: 100vh;
+    overflow-x: hidden;
+    flex-direction: column;
+    padding: 0;
+    > .row {
+      display: flex;
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .value-prop {
+      align-self: center;
+      padding: 0 $large-and-up-padding;
+      .inner {
+
+      }
+    }
+    .demo {
+      padding: 0;
+      overflow: hidden;
+    }
+    h1 {
+      font-size: 3.8rem;
+      margin-top: -48px;
+    }
+    h5 {
+      font-size: 1.45rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+.demo-website-logo,
+.demo-website-url,
+.demo-img-bg {
+  animation-duration: .75s;
+  animation-fill-mode: both;
+  animation-delay: .25s;
+  animation-name: bounceInUp;
+}
+.demo-website-url {
+  z-index: 302;
+  position: absolute;
+  color: #aaa;
+  margin: 63px 30px;
+}
+.demo-website-logo {
+  z-index: 302;
+  position: absolute;
+  color: white;
+  margin: 130px 60px;
+  font-size: 1.4rem;
+  color: rgba(0,0,0,.35);
+}
+.demo-widget {
+  border-radius: 16px;
+  height: 380px;
+  width: 300px;
+  margin: 190px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 299;
+  position: absolute;
+  &.bg {
+    z-index: 300;
+    border: 2px dashed rgba(black,.3);
+    animation-duration: .5s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+    animation-name: fadeInUp;
+    background: rgba(white,.1);
+  }
+  &.fg {
+    z-index: 301;
+    height: 366px;
+    width: 286px;
+    margin: 197px 67px;
+    background: rgba(white,1);
+    animation-duration: 1.4s;
+    animation-fill-mode: both;
+    animation-delay: 1.4s;
+    animation-name: bounceInLeft;
+    color: #999;
+    font-size: 1.4rem;
+    display: flex;
+    flex-direction: column;
+    img {
+      display: block;
+      order: -1;
+      opacity: .3;
+    }
+    .label {
+      display: block;
+      margin: 20px 0;
+    }
+    &:hover {
+      @extend .green;
+      img {
+        color: white;
+        opacity: 1;
+      }
+      .label {
+        color: white;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+@keyframes bounceInUp {
+   0% {
+      opacity: 0;
+      transform: translateY(2000px);
+   }
+
+   100% {
+      transform: translateY(0);
+   }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes bounceInLeft {
+   0% {
+      opacity: 0;
+      transform: translateX(2000px);
+   }
+   70% {
+      opacity: 1;
+      transform: translateX(-30px);
+   }
+   100% {
+      transform: translateX(0);
+   }
+}
