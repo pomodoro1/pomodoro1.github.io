@@ -1,0 +1,35 @@
+.modal {
+  header {
+    img.emoji {
+      height: 64px;
+      margin-bottom: 12px;
+    }
+    h4 {
+      font-weight: 100;
+      margin: 0 0 0;
+      + p {
+        opacity: .75;
+        text-align: center;
+        margin: 1rem 0 2.5rem;
+      }
+    }
+  }
+}
+
+#modal-done {
+  @media #{$medium-and-up}{
+    header {
+      padding: 40px 40px;
+    }
+  }
+}
+
+#form-contact-info {
+  @media #{$medium-and-up}{
+    footer,
+    .fieldset,
+    header {
+      padding: 20px 40px;
+    }
+  }
+}

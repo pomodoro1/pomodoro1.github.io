@@ -30,20 +30,21 @@
 </head>
 
 <body>
+  <a href="#modal-done" id="open-done"></a>
 
   <div class="section" id="hero">
     <nav role="navigation">
       <div class="nav-wrapper">
-        <a id="logo-container" href="#submit-contact" class="brand-logo">
+        <a id="logo-container" href="#form-contact-info" class="brand-logo">
           <img src="assets/img/rocket_02.png" alt="">
           Booking<strong>Boost</strong>
         </a>
         <ul class="right hide-on-med-and-down">
           <li class="for">Tools for smart tourism operators.</li>
-          <li><a href="#submit-contact" class="cta waves-effect">Sign Up</a></li>
+          <li><a href="#form-contact-info" class="cta waves-effect">Sign Up</a></li>
         </ul>
         <!-- <ul id="nav-mobile" class="side-nav">
-          <li><a href="#submit-contact">Sign Up</a></li>
+          <li><a href="#form-contact-info">Sign Up</a></li>
         </ul>
         <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a> -->
       </div>
@@ -58,7 +59,7 @@
           Our booking widget easily drops onto your website.
           Unlike standard inquiry forms, ours is scientifically designed to increase your conversion rates.
         </h5>
-        <a href="#submit-contact" id="" class="waves-effect   cta btn btn-xlarge"><strong>Sign up</strong> for more bookings!</a>
+        <a href="#form-contact-info" id="" class="waves-effect   cta btn btn-xlarge"><strong>Sign up</strong> for more bookings!</a>
       </div>
       <div class="col l5 s12 demo">
         <div class="demo-website-url">
@@ -69,7 +70,7 @@
         </div>
         <div class="demo-widget bg">
         </div>
-        <a href="#submit-contact" class="demo-widget fg waves-effect waves-light">
+        <a href="#form-contact-info" class="demo-widget fg waves-effect waves-light">
           <span class="label">BookingBoost Widget</span>
           <img src="assets/img/rocket_02.png" alt="" class="" />
         </a>
@@ -302,7 +303,7 @@
       </div>
       <div class="row">
         <div class="col s12">
-          <a href="#submit-contact" class="cta btn btn-xlarge waves-effect waves-light">
+          <a href="#form-contact-info" class="cta btn btn-xlarge waves-effect waves-light">
             Improve my conversion rate
           </a>
           <img src="assets/img/arrow_01.png" alt="" class="arrow">
@@ -317,13 +318,14 @@
 
 
   <!-- Modal Structure -->
-  <form action="" method="get" id="submit-contact" class="modal center-align">
+  <form action="?q=1" method="get" id="form-contact-info" class="modal center-align" name="Landing Page">
     <div class="modal-content">
       <header>
-        <img src="assets/img/rocket_02.png" alt="" class="">
+        <img src="assets/img/rocket_02.png" alt="" class="emoji">
         <h4>Let's get started!</h4>
       </header>
       <div class="row fieldset">
+        <input type="hidden" name="q" value="1" />
         <div class="input-field col s12">
           <input id="your_name" type="text" class="validate">
           <label for="your_name">Your Name</label>
@@ -338,13 +340,24 @@
         </div>
       </div>
       <footer class="row">
-        <!-- <a href="" class="btn-large green white-text waves-effect waves-light">Submit</a> -->
         <button type="submit" class="btn-large green white-text waves-effect waves-light">Begin!</button>
       </footer>
     </div>
   </form>
 
 
+
+  <!-- Modal for competed form -->
+  <div id="modal-done" class="modal center-align"  >
+    <div class="modal-content">
+      <header>
+        <img src="assets/img/emoji_sunglasses.png" alt="" class="emoji">
+        <h4>We'll be in touch!</h4>
+      </header>
+      <footer class="row">
+      </footer>
+    </div>
+  </div>
 
 
 
@@ -355,10 +368,26 @@
   <script type="text/javascript" src="assets/js/bin/jquery-2.1.1.min.js"></script>
   <script type="text/javascript" src="assets/js/bin/materialize.min.js"></script>
   <script type="text/javascript">
+
+
+
+
   (function($){
     $(function(){
       //$('.button-collapse').sideNav();
       $('.modal').modal();
+
+      // check url parameters
+      var queryString=location.search;
+      var params=queryString.substring(1).split('&');
+      for(var i=0; i<params.length; i++){
+        var pair=params[i].split('=');
+        if(decodeURIComponent(pair[0])=='q' && pair[1])
+        $('#open-done').trigger('click');
+      }
+      return false;
+
+
     }); // end of document ready
   })(jQuery); // end of jQuery name space
   // on scroll apply .shift-up to .mobile,

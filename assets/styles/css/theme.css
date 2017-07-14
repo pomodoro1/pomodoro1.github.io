@@ -6933,6 +6933,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
       line-height: 90px;
       font-size: 1.4rem; } }
 
+#open-done {
+  display: none !important; }
+
 .modal-overlay {
   opacity: .95 !important;
   background: linear-gradient(45deg, #227fbb, #3b8f57); }
@@ -7325,25 +7328,24 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
         #comparison h2 strong {
           font-size: 3rem; } }
 
-#x-submit-contact h4 {
-  margin: 2.5rem 0 0; }
-  #x-submit-contact h4 + p {
+.modal header img.emoji {
+  height: 64px;
+  margin-bottom: 12px; }
+
+.modal header h4 {
+  font-weight: 100;
+  margin: 0 0 0; }
+  .modal header h4 + p {
     opacity: .75;
     text-align: center;
     margin: 1rem 0 2.5rem; }
 
-#submit-contact h4 + p {
-  text-align: center; }
-
-#submit-contact header img {
-  height: 64px;
-  margin-bottom: 12px; }
-
-#submit-contact header h4 {
-  font-weight: 100; }
+@media only screen and (min-width: 601px) {
+  #modal-done header {
+    padding: 40px 40px; } }
 
 @media only screen and (min-width: 601px) {
-  #submit-contact footer,
-  #submit-contact .fieldset,
-  #submit-contact header {
+  #form-contact-info footer,
+  #form-contact-info .fieldset,
+  #form-contact-info header {
     padding: 20px 40px; } }

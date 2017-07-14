@@ -67,6 +67,9 @@ $large-and-up-padding: 80px;
   }
 }
 
+#open-done {
+  display: none !important;
+}
 
 .modal-overlay {
   opacity: .95 !important;
@@ -82,4 +85,4 @@ $large-and-up-padding: 80px;
 @import "landing_page/hero";
 @import "landing_page/value-points";
 @import "landing_page/comparison";
-@import "landing_page/submit-contact";
+@import "landing_page/modals";
