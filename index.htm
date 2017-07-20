@@ -329,8 +329,8 @@
 
 
   <!-- Modal Structure -->
-  <form action=""
-      method="GET" id="form-signup" class="modal center-align">
+  <form action="https://formspree.io/joshziman@gmail.com"
+      method="POST" id="form-signup" class="modal center-align">
     <div class="modal-content">
       <header>
         <img src="assets/img/rocket_02.png" alt="" class="emoji">
@@ -339,18 +339,20 @@
       <div class="row fieldset">
 
         <input type="hidden" name="q" value="1" />
+        <input type="hidden" name="_next" value="https://pomodoro1.github.io/index.htm?q=1" />
+        <!-- <input type="text" name="_gotcha" style="display:none" /> -->
 
         <div class="input-field col s12">
-          <input id="lead_name" type="text" class="validate"  required>
-          <label for="lead_name">Your Name</label>
+          <input id="lead_name_01" type="text" class="validate" name="lead_name_01">
+          <label for="lead_name_01">Your Name</label>
         </div>
         <div class="input-field col s12">
-          <input id="lead_company_name" type="text" class="validate"   required>
-          <label for="lead_company_name">Company Name</label>
+          <input id="lead_company_name_01" type="text" class="validate" name="lead_company_name_01" >
+          <label for="lead_company_name_01">Company Name</label>
         </div>
         <div class="input-field col s12">
-          <input id="lead_field" type="text" class="validate"   required>
-          <label for="lead_field">Email</label>
+          <input id="lead_email_01" type="email" class="validate" name="lead_email_01">
+          <label for="lead_email_01">Email</label>
         </div>
       </div>
       <footer class="row">
