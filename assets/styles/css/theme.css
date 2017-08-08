@@ -6947,6 +6947,9 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   opacity: .95 !important;
   background: linear-gradient(45deg, #227fbb, #3b8f57); }
 
+#hellobar-bar {
+  background: orange !important; }
+
 #hero {
   background: linear-gradient(45deg, #77bae6, #3b8f57);
   min-height: 100vh;
