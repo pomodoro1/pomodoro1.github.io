@@ -1,5 +1,5 @@
 #hero {
-  background:  linear-gradient(45deg, darken(#77BAE6,25%), darken(#6DC38A,20%));
+  background:  linear-gradient(45deg, darken(#77BAE6,0%), darken(#6DC38A,20%));
   @extend .white-text;
   min-height: 100vh;
   display: flex;
@@ -18,7 +18,7 @@
     }
 
     .for {
-      opacity: .5;
+      opacity: .65;
       text-transform: uppercase;
       letter-spacing: .1rem;
       //display: block;
@@ -62,15 +62,9 @@
 
 
   .cta.btn-xlarge {
-    //@extend .z-depth-4;
-    //@extend .white-text, .green;
-    @extend .green-text, .white;
-    //@extend .transparent, .z-depth-0;
-    border: 2px solid white;
-
+    background: #FF3646;
     strong {
       font-weight: 400;
-      //border-bottom: 2px solid rgba(green,.2);
     }
     &:hover {
       @extend .z-depth-4;
@@ -92,10 +86,10 @@
     }
     i {
        font-style: normal;
-       opacity: .5;
+       opacity: .65;
     }
     em {
-      opacity: .5;
+      opacity: .65;
       text-transform: uppercase;
       letter-spacing: .1rem;
       margin: 1rem 0 0;
@@ -110,6 +104,7 @@
     font-weight: 100;
     padding: 0 0;
     font-size: 1.3rem;
+    color: #2C3C48;
   }
 
   @media #{$medium-and-down} {
