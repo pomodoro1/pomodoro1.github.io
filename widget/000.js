@@ -12,6 +12,9 @@ var observer = new MutationObserver(function(mutations, observer) {
     			var iFrame01 = document.getElementsByClassName('HB-Bar')[0].contentDocument.body;
 				var elm = "<button style='padding: 2.5px 15px;color: #5ea8aa;background-color: #ffffff;border: 1px solid #ffffff;font-size: 17px'>New Button</button>";
 				iFrame01.getElementsByClassName('hb-content-wrapper')[0].innerHTML += elm;
+        var styleEl = document.createElement('style');
+        styleEl.innerHTML = '.hb-text-holder {color: red !important;}';
+        document.head.appendChild(styleEl);
     		}
     	});
     }
