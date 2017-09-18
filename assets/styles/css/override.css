@@ -1,3 +1,9 @@
-.hb-text-holder {
-  color: red !important;
+.repuso_card {
+  background: green !important;
+}
+.repuso_prev {
+  display: none !important;
+}
+.new-button {
+  background: red !important;
 }
