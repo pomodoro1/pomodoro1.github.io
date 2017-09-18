@@ -9,7 +9,7 @@ var observer = new MutationObserver(function(mutations, observer) {
     	$nodes.each(function() {
     		var $node = $( this );
     		if( $node.has( '#repuso_floating_iframe' ) ) {
-    			var iFrame02 = document.getElementById('repuso_floating_iframe')[0].contentDocument.body;
+    			var iFrame02 = document.getElementById('repuso_floating_iframe');
 				var elm = "<button style='padding: 2.5px 15px;color: #5ea8aa;background-color: #ffffff;border: 1px solid #ffffff;font-size: 17px'>New Button</button>";
         iFrame02.getElementsByClassName('repuso_content')[0].innerHTML += elm;
         }
