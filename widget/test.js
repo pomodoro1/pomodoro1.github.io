@@ -8,11 +8,11 @@ var observer = new MutationObserver(function(mutations, observer) {
     	var $nodes = $( newNodes ); // jQuery set
     	$nodes.each(function() {
     		var $node = $( this );
-    		if( $node.hasClass( "HB-Bar" ) ) {
-    			var iFrame01 = document.getElementsByClassName('HB-Bar')[0].contentDocument.body;
+    		if( $node.has( '#repuso_floating_iframe' ) ) {
+    			var iFrame02 = document.getElementsById('repuso_floating_iframe')[0].contentDocument.body;
 				var elm = "<button style='padding: 2.5px 15px;color: #5ea8aa;background-color: #ffffff;border: 1px solid #ffffff;font-size: 17px'>New Button</button>";
-				iFrame01.getElementsByClassName('hb-content-wrapper')[0].innerHTML += elm;
-    		}
+        iFrame02.getElementsByClassName('repuso_content')[0].innerHTML += elm;
+        }
     	});
     }
   });
