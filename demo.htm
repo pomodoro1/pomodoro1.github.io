@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--Import Google Icon Font-->
+  <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="assets/styles/css/theme.css"  media="screen,projection"/>
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Boost Tour &amp; Shuttle Bookings | BookingBoost</title>
+
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <script type="text/javascript">
+    window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])};
+      heap.load("3126655127");
+  </script>
+
+
+
+</head>
+
+<body>
+
+  
+
+
+
+
+
+  <!--Import jQuery before materialize.js-->
+  <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script> -->
+  <script type="text/javascript" src="assets/js/bin/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="assets/js/bin/materialize.min.js"></script>
+  <script type="text/javascript">
+
+
+
+
+  (function($){
+    $(function(){
+      //$('.button-collapse').sideNav();
+      $('.modal').modal();
+
+      // check url parameters
+      var queryString=location.search;
+      var params=queryString.substring(1).split('&');
+      for(var i=0; i<params.length; i++){
+        var pair=params[i].split('=');
+        if(decodeURIComponent(pair[0])=='q' && pair[1])
+        $('#open-done').trigger('click');
+      }
+      return false;
+
+
+    }); // end of document ready
+  })(jQuery); // end of jQuery name space
+  // on scroll apply .shift-up to .mobile,
+  $(window).on('scroll',function(){
+    stop = Math.round($(window).scrollTop());
+    if (stop > 10) {
+      $('.mobile').addClass('shift-up');
+    } else {
+      $('.mobile').removeClass('shift-up');
+    }
+  });
+  </script>
+
+
+    <!-- Start of HubSpot Embed Code -->
+      <script type="text/javascript" id="hs-script-loader" async defer src="//js.hs-scripts.com/3325393.js"></script>
+    <!-- End of HubSpot Embed Code -->
+
+
+    <!-- HelloBar -->
+    <script src="//my.hellobar.com/95c1de8bd26a9cf57a6d9371a803ddae451dff6a.js" type="text/javascript" charset="utf-8" async="async"></script>
+    <!-- end HelloBar -->
+
+    <!-- Begin Repuso widget code -->
+    <script> var repuso_floating_id = 3983; var website_id = 0; </script>
+    <script type="text/javascript" src="https://repuso.com/widgets/floating.js" async></script>
+    <!-- End Repuso widget code -->
+
+    <!-- Fiverr developer, the code will need to go here -->
+    <script src="//bookingboost.io/widget/000.js" type="text/javascript" charset="utf-8" async="async"></script>
+    <!-- -->
+
+
+</body>
+</html>
